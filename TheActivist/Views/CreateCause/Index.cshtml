@@ -1,0 +1,19 @@
+﻿@model CauseClass;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post">
+    <div class="mb-3">
+      <label asp-for="CausesName" class="form-label">Cause Name</label>
+      <input asp-for="CausesName" type="text" class="form-control" id="formGroupExampleInput" placeholder="Cause Name">
+    </div>
+    <div class="mb-3">
+      <label asp-for="CausesDescription" class="form-label">Cause Dicription</label>
+      <textarea asp-for="CausesDescription" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div><div class="mb-3">
+     <input type="submit" value="CREATE" class="form-control bg-primary btn-block my-4 text-uppercase text-white btn btn-primary" />
+    </div>
+</form>
+

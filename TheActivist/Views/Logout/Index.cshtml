@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card p-2 mt-5 col-12 col-sm-8 col-md-6 m-auto shadow">
+    <form method="post">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                <p class="text-center">Are you sure you want to logout?</p>
+                <p class="text-center">
+                    <button class="btn btn-primary me-3" asp-controller="Logout" asp-action="Logout" >Yes</button>
+                    <button class="btn btn-light m-lg-5 border-dark" asp-controller="Logout" asp-action="DontLogout" >No</button>
+                </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

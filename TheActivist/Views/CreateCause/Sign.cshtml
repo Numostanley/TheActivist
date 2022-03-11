@@ -1,0 +1,21 @@
+﻿@model CauseClass;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card p-2 mt-5 col-12 col-sm-8 col-md-6 m-auto shadow">
+    <form method="post" asp-action="Sign">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                <p class="text-center">Are you sure you want to Sign @Model.CausesName? </p>
+                <p class="text-center">
+                    <button class="btn btn-primary me-3" asp-controller="CreateCause" asp-action="Sign" asp-route-id="@Model.CausesId" >Yes</button>
+                    <button class="btn btn-light m-lg-5 border-dark" asp-controller="CreateCause" asp-action="Details" asp-route-id="@Model.CausesId" >No</button>
+                </p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

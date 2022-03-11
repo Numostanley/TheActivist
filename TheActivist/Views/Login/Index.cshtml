@@ -1,0 +1,86 @@
+﻿@model Login
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5  pt-5 " >
+
+<div class="row">
+    <div class="col-12 col-sm-8 col-md-6 m-auto">
+        <div class="card border-0 shadow">
+            <div class="card-body rounded-3  border p-4">
+                <h3 class="text-center fw-light">Log in to account</h3>
+                    <form method="post" class="pt-3">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+            
+                        <div class="form-group p-1">
+                            <label asp-for="UserName" class="control-label fw-light"></label>
+              
+                            <input type="text" asp-for="UserName" class="form-control" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group p-1">
+                            <label asp-for="Password" class="control-label fw-light"></label>
+                            <input type="password" asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <br />
+                         <div class="mb-3 ms-1 form-check">
+                            <input type="checkbox" asp-for="RememberMe" class="form-check-input" />
+                            <label asp-for="RememberMe" class="form-check-label">Remember Me?</label>
+                         </div>
+                        <div class="text-center p-1">
+                            <input type="submit" value="Log In" class="form-control bg-primary btn-block my-4 text-uppercase text-white btn btn-primary" />
+                        </div>
+            
+                        <div class="form-group  p-1">
+                            <hr />
+                            <div class="justify-content-center d-flex">
+                            <h5 class="fw-light text-center pt-2">New User?  </h5>
+                            <div class="m-1" ></div>
+                            <a href="/Register/Index" class="fw-light text-center text-decoration-none pt-2">  Sign Up</a>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+@*
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1 class="mb-3">Login</h1>
+
+            <form method="post">
+                <div asp-validation-summary="All" class="text-danger">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="UserName">User Name</label>
+                    <input type="text" asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" asp-for="Password">Password</label>
+                    <input type="password" asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" asp-for="RememberMe" class="form-check-input" />
+                    <label asp-for="RememberMe" class="form-check-label">Remember Me?</label>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <div class="mb-3">
+                     <p>Not registered?</p> <a href="/Register/Index" class="btn btn-primary">Register</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>*@

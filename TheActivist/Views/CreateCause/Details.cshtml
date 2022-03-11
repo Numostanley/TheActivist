@@ -1,0 +1,54 @@
+﻿@using TheActivist.Models
+@model CauseClass
+
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<!-- Your share button code -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="hqdRS2I1"></script>
+<script>
+    function GetURL() {
+        var gfg = $(location).attr('href');
+        $("url").get(0).innerHTML = gfg;
+    }
+</script>
+
+
+
+<div class="card text-center">
+
+  <div class="card-body">
+    <h3 class="card-title">@Model.CausesName</h3>
+    <div class="fb-share-button btn mt-2" data-href="url" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    <a asp-controller="CreateCause" asp-action="Signed" asp-route-id="@Model.CausesId" class="btn btn-secondary mt-2 me-3"><i class="bi bi-check-circle"></i> SIGNED</a>
+    <a asp-controller="CreateCause" asp-action="Sign" asp-route-id="@Model.CausesId" class="btn btn-primary mt-2 me-3"><i class="bi bi-plus-circle"></i> SIGN</a>
+  </div>
+
+  <div class="card-footer text-muted">
+    @Model.CreatedDateTime
+  </div>
+
+</div>
+<div class="card p-2">
+    <div class="card-body">
+        <h3 class="card-title fs-5 text-center">Cause Description</h3>
+        <h5 class="card-text fw-light">@Model.CausesDescription</h5>
+        <br />
+        <a asp-controller="CreateCause" asp-action="Delete" asp-route-id="@Model.CausesId" class="btn btn-outline-danger float-end"><i class="bi bi-trash"></i>  DELETE</a>
+    </div>
+      
+</div>
+
+
+
+
+
+
+
+
+
+
