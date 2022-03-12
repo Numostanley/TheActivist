@@ -174,7 +174,7 @@ namespace TheActivist.Controllers
                 TempData["Error"] = "Sorry, You are not an Admin";
                 return RedirectToAction("Details", new { id = id });
             }
-            return RedirectToAction("Details", new { id = id });
+            return RedirectToAction("Index", "Home", new { area = "" });
         }
     }
 }
